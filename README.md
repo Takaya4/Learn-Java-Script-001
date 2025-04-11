@@ -1,4 +1,4 @@
-# Learn-Java-Script
+# Learn-Java-Script-001 (todo list)
 JavaScript個人勉強用
 
 以下を写経する<br>
