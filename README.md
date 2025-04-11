@@ -1,7 +1,7 @@
 # Learn-Java-Script
 JavaScript個人勉強用
 
-以下をクローンしJavaScriptの部分を写経元する<br>
+以下を写経する<br>
 https://github.com/dwyl/javascript-todo-list-tutorial?tab=readme-ov-file
 
 **目標**<br>
