@@ -13,5 +13,5 @@ https://github.com/dwyl/javascript-todo-list-tutorial?tab=readme-ov-file
 
 **memo**
 ***
-クローン：ローカルにコピーする
-変更はステージしてから出ないとコミットできない
+ - クローン：ローカルにコピーする
+ - 変更はステージしてから出ないとコミットできない
