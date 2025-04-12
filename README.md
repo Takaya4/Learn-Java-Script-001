@@ -51,3 +51,4 @@ fatal: Need to specify how to reconcile divergent branches.
 2025-04-12 23:19:35.453 [info] > git for-each-ref --sort -committerdate --format %(refname) %(objectname) %(*objectname) [62ms]
 2025-04-12 23:20:27.961 [info] > git ls-tree -l e7daee56d97c2198fab2288747c23ef879f3167c -- /Users/takaya/Desktop/Learn-Java-Script-001/README.md [1273ms]
 2025-04-12 23:20:27.967 [info] > git ls-tree -l fd5b1e56bd20b788a2b77aca7a6a2a0073d56015 -- /Users/takaya/Desktop/Learn-Java-Script-001/README.md [1277ms]
+ - ↑ターミナルでのこれが原因ぽい　zsh: no matches found: 〜
