@@ -15,7 +15,7 @@ https://github.com/dwyl/javascript-todo-list-tutorial?tab=readme-ov-file
 <br><br><br>
 **つまづき**
 ***
- - リモートのリポジトリとローカルのリポジトリ名が違いステージからコミットしてもgithubに変更されなかったため、リポジトリをクローンし直すが、コミットできず
+ - リモートのリポジトリとローカルのリポジトリ名が違いステージからコミットしてもgithubに変更されなかったため、リポジトリをクローンし直すが、コミット反映されず
 [![Image from Gyazo](https://t.gyazo.com/teams/x-point-1/cfdbb243df0aab3a87fcb729344d9ada.png)](https://x-point-1.gyazo.com/cfdbb243df0aab3a87fcb729344d9ada)
  * branch            main       -> FETCH_HEAD
    a315ef7..05ba89b  main       -> origin/main
