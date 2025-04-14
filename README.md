@@ -54,3 +54,4 @@ fatal: Need to specify how to reconcile divergent branches.
  - ↑ターミナルでのこれが原因ぽい　zsh: no matches found: 〜
  - ↑ちがうんか〜〜〜〜〜〜〜い
 コミットテスト
+リポジトリをクローンし直して解決
