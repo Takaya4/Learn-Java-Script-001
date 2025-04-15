@@ -33,4 +33,14 @@ test('`update` default case should return model unmodified' ,function (t){
 }):
 
 // 次24行目から
-ブランチ
+test('update `ADD` a new todo item to model.todos Array', function (t){
+    const model = JSON.parse(JSON.stringify(app.model)); //initial state
+    t.equal(model.todos,length, 0, "initial model.todos.length is 0");
+    const update_model = app.update(`ADD` ,model, "Add Todo List Item");
+    const expected = { id: 1, title:"Add Todo List Item", done:false};
+    t.equal(update_model.todos.length, 1, "updated_model.todos.length is 1");
+    t.deepEqual(updated_model.todos[0], expected, "Todo List item added.");
+    t.end();
+});
+
+// 次34行目から
