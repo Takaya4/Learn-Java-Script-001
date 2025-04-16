@@ -44,3 +44,25 @@ test('update `ADD` a new todo item to model.todos Array', function (t){
 });
 
 // 次34行目から
+test('update `TOGGLE` a todo item form done=false to done=true', function (t){
+    const model =JSON,parse(JSON.stringify(app.model)); //initial state
+    const model_with_todo = app.update('ADD', model, "Toggle a todo list item");
+    const item = model_with_todo.todos[0];
+    const model_todo_done = app.update('TOGGLE', model_with_todo, item.id);
+    const expected = { id:1, title: "Toggle a todo list item Toggled."};
+    t.end();
+});
+//44
+test('`TOGGLE` (undo) a todo item form done=true to done=false', function (t){
+    const model = JSON.parse(JSON.stringify(app.model)); //initial state
+    const model_with_todo =app.update('ADD', model, "Toggle a todo list item");
+    const item = model_with_todo.todos[0];
+    const model_todo_done = app.update('TOGGLE', model_with_todo,item.id);
+    const expected = { id:1, title: "Toggle a todo list item", done: ture};
+    t.deepEqual(model_todo_done.todos[0], expected, "toggled done=false >> true");
+    //add another item before "undoing" the original one:
+    const model_second_item = app.update('ADD', model_todo_done, "Another todo");
+    t.equal(model_second_item.todos.length, 2, "there are TWO todo items");
+    // Toggle the original item such that: done=true >> done=false
+    //55から 
+})
