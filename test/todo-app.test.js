@@ -33,3 +33,36 @@ test('`update` default case should return model unmodified' ,function (t){
 }):
 
 // 次24行目から
+test('update `ADD` a new todo item to model.todos Array', function (t){
+    const model = JSON.parse(JSON.stringify(app.model)); //initial state
+    t.equal(model.todos,length, 0, "initial model.todos.length is 0");
+    const update_model = app.update(`ADD` ,model, "Add Todo List Item");
+    const expected = { id: 1, title:"Add Todo List Item", done:false};
+    t.equal(update_model.todos.length, 1, "updated_model.todos.length is 1");
+    t.deepEqual(updated_model.todos[0], expected, "Todo List item added.");
+    t.end();
+});
+
+// 次34行目から
+test('update `TOGGLE` a todo item form done=false to done=true', function (t){
+    const model =JSON,parse(JSON.stringify(app.model)); //initial state
+    const model_with_todo = app.update('ADD', model, "Toggle a todo list item");
+    const item = model_with_todo.todos[0];
+    const model_todo_done = app.update('TOGGLE', model_with_todo, item.id);
+    const expected = { id:1, title: "Toggle a todo list item Toggled."};
+    t.end();
+});
+//44
+test('`TOGGLE` (undo) a todo item form done=true to done=false', function (t){
+    const model = JSON.parse(JSON.stringify(app.model)); //initial state
+    const model_with_todo =app.update('ADD', model, "Toggle a todo list item");
+    const item = model_with_todo.todos[0];
+    const model_todo_done = app.update('TOGGLE', model_with_todo,item.id);
+    const expected = { id:1, title: "Toggle a todo list item", done: ture};
+    t.deepEqual(model_todo_done.todos[0], expected, "toggled done=false >> true");
+    //add another item before "undoing" the original one:
+    const model_second_item = app.update('ADD', model_todo_done, "Another todo");
+    t.equal(model_second_item.todos.length, 2, "there are TWO todo items");
+    // Toggle the original item such that: done=true >> done=false
+    //55から 
+})
