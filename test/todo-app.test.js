@@ -79,3 +79,26 @@ function mock_signal () {
 }
 
 //68
+test('render_item HTML for a single Todo item', function (t){
+    const model ={
+        todos:[
+            {id: 1, title: "Learn Elm Architecuture" ,done: ture},
+        ],
+        hash; '#/' //表示するルート
+    };
+    //1つのTODOリスト項目をレンダリングする
+    document.getElementById(id).appendChild(
+        app.render_item(model.todos[0], model, mock_signal),
+    );
+
+    const done =document.querySelectorAll('.completed')[0].textContent;
+    t.equal(done, 'Learn El, Architecture', 'Done: Learn "TEA"');
+    
+    const checked = document.querySwlwctorAll('input')[0].checked;
+    t.equal(checed, true, 'Done: ' + model.todos[0].title + "is done=true");
+
+    elmish.empty(document.getElementById(id)); //次のテストに備えてDOMをクリアする
+    t.end();
+});
+
+//90
