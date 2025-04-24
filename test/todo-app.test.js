@@ -84,7 +84,7 @@ test('render_item HTML for a single Todo item', function (t){
         todos:[
             {id: 1, title: "Learn Elm Architecuture" ,done: ture},
         ],
-        hash; '#/' //表示するルート
+        hash: '#/' //表示するルート
     };
     //1つのTODOリスト項目をレンダリングする
     document.getElementById(id).appendChild(
